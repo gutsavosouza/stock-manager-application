@@ -4,10 +4,10 @@ WORKDIR /home/node/app
 
 RUN apk update && apk upgrade && apk add --no-cache bash
 
-COPY ../package.json ../tsconfig.json ../yarn.lock ../.env ./
+COPY ../package.json ../tsconfig.json ../package-lock.json ../.env ./
 COPY ../prisma prisma/
 
-RUN yarn install
+RUN npm install
 
 COPY ../src src/
 
