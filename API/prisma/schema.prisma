@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  product_id String @id @default(uuid())
+  product_name String 
+  product_description String
+  product_quantity_in_stock Int
+  sales SaleProducts[]
+}
+
+model Sale {
+  sale_id String @id @default(uuid())
+  sale_buyer_description String
+  sale_date DateTime
+}
+
+model SaleProducts {
+  sale_products_id String @id @default(uuid())
+  product_id String
+  sale_product_quantity Int
+  sale_unit_price Float
+  product Product @relation(fields: [product_id], references: [product_id])
+}
