@@ -4,10 +4,12 @@
   "description": "Simple Stock Mangaer API",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.ts",
     "migrate": "prisma migrate dev",
-    "tsc": "tsc --init"
+    "start": "docker compose -f docker/compose.yml up",
+    "start-b": "docker compose -f docker/compose.yml up --build",
+    "stop": "docker compose -f docker/compose.yml down",
+    "setup": "chmod +x src/config/entrypoint.sh"
   },
   "repository": {
     "type": "git",
