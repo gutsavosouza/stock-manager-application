@@ -80,6 +80,7 @@ export const createSale = async (req, res) => {
 
                 await prisma.saleProducts.create({
                     data: {
+                        sale_id: sale.sale_id,
                         product_id: product_id,
                         sale_product_quantity: sale_product_quantity,
                         sale_unit_price: sale_unit_price
@@ -146,7 +147,7 @@ export const deleteSale = async (req, res) => {
         });
 
         res.status(200).json({ 
-            data: {}
+            message: "Sale deleted"
         });
     } catch(e) {
         console.log('Error while deleting sale: ', e);

@@ -7,7 +7,7 @@ export const getAllProducts = async (req, res) => {
     try {
         const allProducts = await productClient.findMany({
             include: {
-                sales: true
+                saleproducts: true
             }
         });
 
@@ -31,7 +31,7 @@ export const getProductById = async (req, res) => {
                 product_id: productId
             },
             include: {
-                sales: true
+                saleproducts: true
             }
         });
 
@@ -105,7 +105,7 @@ export const deleteProduct = async (req, res) => {
         });
 
         res.status(200).json({ 
-            data: {}
+            message: "Product deleted"
         });
     } catch(e) {
         console.log('Error while deleting product', e);
