@@ -1,7 +1,7 @@
 # stock-manager-app
 Aplicativo simples dividido em duas partes: API e Interface
-- API: Uma API dockerizada simples que gerencia um banco de dados para o gerenciamento de produtos e vendas dos mesmos
-- A interface faz o consumo da API e disponiblizada as informação para o usuário
+- Uma API dockerizada simples que gerencia um banco de dados para o gerenciamento de produtos e vendas dos mesmos
+- A interface faz o consumo da API e disponibiliza as informações para o usuário
 
 ## Rodando a aplicação
 
