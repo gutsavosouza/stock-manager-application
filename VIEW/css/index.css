@@ -1,0 +1,65 @@
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+    
+
+.content {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 75%;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content h1, span {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.app-name {
+    font-size: 3rem;
+}
+
+
+.options-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 80%;
+    margin-bottom: 55px;
+}
+
+.options-wrapper button {
+    font-size: 2rem;
+    padding: 40px;
+}
+
+.options-wrapper button:hover {
+    transform: scale(1.02);
+}
+
+.table-wrapper {
+    margin-top: 10px;
+}
+
+.wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .options-wrapper button {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .options-wrapper {
+        width: 90%;
+    }
+}

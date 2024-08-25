@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Manager App</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sidebar.css"/>
+    <link rel="stylesheet" href="./css/table.css"/>
+    <link rel="stylesheet" href="./css/notification.css"/>
+    <link rel="stylesheet" href="./css/products-list.css"/>
+  </head>
+  <body>
+    <!-- Sidebar e botão da sidebar -->
+    <section class="sidebar" id="sidebar">
+      <button onclick="closeSidebar()" class="sidebar-button">☰</button>
+      <a href="./index.html" class="sidebar-item">Início</a>
+      <a href="./products.html" class="sidebar-item">Produtos</a>
+      <a href="./newproduct.html" class="sidebar-item">Cadastrar Produtos</a>
+      <a href="" class="sidebar-item">Vendas</a>
+      <a href="" class="sidebar-item">Cadastrar Vendas</a>
+    </section>
+    <section>
+      <button
+        class="sidebar-button"
+        style="
+          border-right: solid 2px #1f1f1f;
+          border-bottom: solid 2px #1f1f1f;
+        "
+        onclick="openSidebar()"
+      >
+        ☰
+      </button>
+    </section>
+    
+    <!-- Conteúdo da página -->
+    <section class="products-container" id="productTable">
+        <h2>Produtos</h2>
+        <input type="text" class="table-filter" id="filterInput" placeholder="  Digite para buscar"/>
+        <div class="table-wrapper">
+          <table class="product-table" id="productTable">
+            <thead class="table-label">
+              <tr>
+                <th scope="col">Nome do produto</th>
+                <th scope="col">Quantidade em estoque</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Deletar</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Estruturação da notificação -->
+    <div class="notification-wrapper">
+      <div class="notification" id="notification">
+        <span>texto </span>
+      </div>
+    </div>
+    
+    <script type="module" src="./dist/notification.js"></script>
+    <script src="./dist/sidebar.js"></script>
+    <script type="module" src="./dist/product.js"></script>
+    <script type='module' src="./dist/retrieveproducts.js"></script>
+    <script type="module" src="./dist/table-filter.js"></script>
+  </body>
+</html>

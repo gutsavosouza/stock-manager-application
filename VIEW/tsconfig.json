@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es6",                // Set the JavaScript target version (ES6 or higher)
+      "module": "ESNext",                // Use ES modules, suitable for browsers
+      "strict": true,                 // Enable all strict type-checking options
+      "esModuleInterop": true,        // Enables emit interoperability for `import` and `require`
+      "forceConsistentCasingInFileNames": true,  // Ensure consistent casing in file imports
+      "outDir": "./dist",             // Output directory for compiled JavaScript files
+      "rootDir": "./src",             // Root directory of TypeScript source files
+      "moduleResolution": "node",     // Module resolution strategy
+      "skipLibCheck": true,            // Skip type checking of declaration files (.d.ts)
+      "allowJs": true                   // Allow .js files to be imported
+    },
+    "include": ["src/**/*"],          // Include all TypeScript files in the `src` directory
+    "exclude": ["node_modules", "**/*.spec.ts"] // Exclude node_modules and test files
+}

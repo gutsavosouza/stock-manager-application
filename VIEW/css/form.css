@@ -1,0 +1,77 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.product-form h2 {
+    margin-top: 0px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-item input,textarea:focus {
+    outline: none;
+}
+
+.form-item input, textarea {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+}
+
+.form-item label {
+    margin-bottom: 10px;
+}
+
+.form-item input {
+    height: 40px;
+}
+
+.form-item input, textarea {
+    border-radius: 5px;
+    border: none;
+}
+
+.form-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the form fields */
+}
+
+.form-row .form-item {
+    flex: 1; /* Makes form items equally wide */
+    margin-right: 10px; /* Adds spacing between the form items */
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        display: block;
+    }
+
+    .product-form {
+        font-size: 1rem;
+    }
+
+    .form-item input, textarea {
+        font-size: 0.9rem;
+    }
+}

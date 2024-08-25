@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Manager App</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/notification.css" />
+  </head>
+  <body>
+    <!-- Sidebar e o botão da sidebar -->
+    <section class="sidebar" id="sidebar">
+      <button onclick="closeSidebar()" class="sidebar-button">☰</button>
+      <a href="./index.html" class="sidebar-item">Início</a>
+      <a href="./products.html" class="sidebar-item">Produtos</a>
+      <a href="./newproduct.html" class="sidebar-item">Cadastrar Produtos</a>
+      <a href="" class="sidebar-item">Vendas</a>
+      <a href="" class="sidebar-item">Cadastrar Vendas</a>
+    </section>
+    <section>
+      <button
+        class="sidebar-button"
+        style="
+          border-right: solid 2px #1f1f1f;
+          border-bottom: solid 2px #1f1f1f;
+        "
+        onclick="openSidebar()"
+      >
+        ☰
+      </button>
+    </section>
+
+    <!-- Formulário de cadastro de produto -->
+    <section class="form-container">
+      <form class="product-form" id="productForm">
+        <h2>Cadastrar novo produto</h2>
+        <div class="form-row">
+          <!-- Campo de nome do produto -->
+          <div class="form-item">
+            <label for="productName">Nome do Produto:</label>
+            <input
+              type="text"
+              id="productName"
+              name="productName"
+              placeholder="Insira o nome do produto"
+              required
+            />
+          </div>
+
+          <!-- Campo de quantidade em estoque -->
+          <div class="form-item">
+            <label for="quantityInStock">Quantidade em estoque:</label>
+            <input
+              type="number"
+              id="quantityInStock"
+              name="quantityInStock"
+              placeholder="Insira a quantidade em estoque"
+              min="0"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- campo de descrição do produto-->
+        <div class="form-item">
+          <label for="productDescription">Descrição do produto:</label>
+          <textarea
+            id="productDescription"
+            style="resize: none"
+            name="productDescription"
+            placeholder="Insira a descrição do produto"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Botão de enviar formulário -->
+        <div class="form-button-wrapper">
+          <button class="button black" type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Estruturação da notificação -->
+    <div class="notification-wrapper">
+      <div class="notification" id="notification">
+        
+      </div>
+    </div>
+    
+    <script type="module" src="./dist/notification.js"></script>
+    <script type="module" src="./dist/createproduct.js"></script>
+    <script src="./dist/sidebar.js"></script>
+  </body>
+</html>

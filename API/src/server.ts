@@ -4,9 +4,12 @@ import saleRouter from './routes/sale.router';
 import saleProductRouter from './routes/saleproduct.router';
 
 const application = express();
+const cors = require('cors');
+
 const PORT = process.env.PORT || 8080;
 
 application.use(express.json());
+application.use(cors());
 
 application.use('/products', productRouter);
 application.use('/sales', saleRouter);
