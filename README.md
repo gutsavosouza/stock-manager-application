@@ -10,6 +10,7 @@ Aplicativo simples dividido em duas partes: API e Interface
 - [NPM](https://nodejs.org/en/download/package-manager) (v1.22.22 ou maior)
 - [Docker (opcional)](https://www.docker.com/products/docker-desktop) (v27.1.2 ou maior)
 - [Docker Compose (opcional)](https://docs.docker.com/compose/install/) (v2.28.1 ou maior)
+- Typescript
 
 ### Instalação
 
@@ -50,11 +51,15 @@ Para subir o servidor da interface, você precisa entrar no diretório VIEW e ex
     ```
     npm install
     ```
-2. Para subir o servidor utilize o comando
+2. Para transpilar o código em Typescript para Javascript utilize o comando a seguir, no diretório VIEW.
+    ```
+    npx tsc
+    ```
+3. Para subir o servidor utilize o comando
     ```
     npx http-server -p 7070
     ```
-3. Basta acessar agora a rota localhost:7070 em seu navegador de preferência
+4. Basta acessar agora a rota localhost:7070 em seu navegador de preferência
 
 ### Planos futuros
 Alguns pontos da aplicação ainda estão em desenvolvimento:
