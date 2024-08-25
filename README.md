@@ -10,7 +10,6 @@ Aplicativo simples dividido em duas partes: API e Interface
 - [NPM](https://nodejs.org/en/download/package-manager) (v1.22.22 ou maior)
 - [Docker (opcional)](https://www.docker.com/products/docker-desktop) (v27.1.2 ou maior)
 - [Docker Compose (opcional)](https://docs.docker.com/compose/install/) (v2.28.1 ou maior)
-- Typescript
 
 ### Instalação
 
