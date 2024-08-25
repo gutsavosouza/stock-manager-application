@@ -46,7 +46,7 @@ Para subir o servidor da API, você precisa entrar no diretório API e executar 
 
 #### Interface
 Para subir o servidor da interface, você precisa entrar no diretório VIEW e executar os comandos:
-1. Para instalar todas as dependências da API:
+1. Para instalar todas as dependências da interface:
     ```
     npm install
     ```
