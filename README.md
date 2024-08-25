@@ -3,6 +3,8 @@ Aplicativo simples dividido em duas partes: API e Interface
 - Uma API dockerizada simples que gerencia um banco de dados para o gerenciamento de produtos e vendas dos mesmos
 - A interface faz o consumo da API e disponibiliza as informações para o usuário
 
+![Página inicial da aplicação](./VIEW/main-page.png)
+
 ## Rodando a aplicação
 
 ### Pre-requisitos
@@ -64,3 +66,5 @@ Para subir o servidor da interface, você precisa entrar no diretório VIEW e ex
 Alguns pontos da aplicação ainda estão em desenvolvimento:
 - Vendas ainda não foram implemenentdas na interface da aplicação
 - Dashboard ainda não foi implementado na API e na interface
+- Sistema de autenticação para uso da API
+- Sistema de login e cadastro para uso da interface
