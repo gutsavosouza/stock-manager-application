@@ -13,6 +13,7 @@ Aplicativo simples dividido em duas partes: API e Interface
 - [Docker (opcional)](https://www.docker.com/products/docker-desktop) (v27.1.2 ou maior)
 - [Docker Compose (opcional)](https://docs.docker.com/compose/install/) (v2.28.1 ou maior)
 - [PostgreSQL](https://www.postgresql.org/download/) (v16  ou maior)
+- [Angular](https://angular.dev/) (v18.2.5 ou maior)
 
 ### Instalação
 
@@ -48,20 +49,18 @@ Para subir o servidor da API, você precisa entrar no diretório API e executar 
    ```
 
 #### Interface
-Para subir o servidor da interface, você precisa entrar no diretório VIEW e executar os comandos:
+Para subir o servidor da interface, você precisa entrar no diretório CLIENT e executar os comandos:
 1. Para instalar todas as dependências da interface:
     ```
     npm install
     ```
-2. Para transpilar o código em Typescript para Javascript utilize o comando a seguir, no diretório VIEW.
+2. Para rodar a aplicação utiliza algum dos comandos abaixo, no diretório CLIENT:
     ```
-    npx tsc
+    npm run start
     ```
-3. Para subir o servidor utilize o comando
     ```
-    npx http-server -p 7070
+    ng serve
     ```
-4. Basta acessar agora a rota localhost:7070 em seu navegador de preferência
 
 ### Planos futuros
 Alguns pontos da aplicação ainda estão em desenvolvimento:
