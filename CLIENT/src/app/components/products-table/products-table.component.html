@@ -28,9 +28,7 @@
         <tr *ngIf="filteredProducts.length === 0 && searchQuery.length >= 1">
           <td colspan="4">Sem resultados para a busca</td>
         </tr>
-        <tr *ngIf="paginatedProducts.length === 0 && searchQuery.length === 0">
-          <td colspan="4">Sem produtos nessa página</td>
-        </tr>
+        
         <tr *ngFor="let product of paginatedProducts">
           <td>{{ product.product_name }}</td>
           <td>{{ product.product_quantity_in_stock }}</td>

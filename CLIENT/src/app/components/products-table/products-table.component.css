@@ -55,11 +55,7 @@
         width: 100%;
         overflow: auto;
     }
-
-    .table-wrapper {
-        overflow: auto;
-    }
-
+    
     .product-table th, td, .table-filter {
         font-size: 0.7rem;
     }
