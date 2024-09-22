@@ -1,0 +1,69 @@
+<app-notification #notification></app-notification>
+
+<!-- Search Input -->
+<input
+  [(ngModel)]="searchQuery"
+  (ngModelChange)="filterProducts()"
+  type="text"
+  class="table-filter"
+  id="filterInput"
+  placeholder="Digite para buscar"
+/>
+
+<section class="products-container" id="productTable">
+  <div class="table-wrapper">
+    <table class="product-table" id="productTable">
+      <thead class="table-label">
+        <tr>
+          <th scope="col">Nome do produto</th>
+          <th scope="col">Quantidade em estoque</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Deletar</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr *ngIf="products.length === 0 && searchQuery.length === 0">
+          <td colspan="4">Sem produtos no banco de dados</td>
+        </tr>
+        <tr *ngIf="filteredProducts.length === 0 && searchQuery.length >= 1">
+          <td colspan="4">Sem resultados para a busca</td>
+        </tr>
+        <tr *ngIf="paginatedProducts.length === 0 && searchQuery.length === 0">
+          <td colspan="4">Sem produtos nessa página</td>
+        </tr>
+        <tr *ngFor="let product of paginatedProducts">
+          <td>{{ product.product_name }}</td>
+          <td>{{ product.product_quantity_in_stock }}</td>
+          <td>{{ product.product_description }}</td>
+          <td class="th-fixed-width">
+            <button
+              *ngIf="selectedProductIdForDeletion !== product.product_id"
+              class="button red"
+              (click)="onDeleteClick(product.product_id)"
+            >
+              Deletar
+            </button>
+            <div *ngIf="selectedProductIdForDeletion === product.product_id">
+              <button
+                class="button green"
+                (click)="onConfirmClick(product.product_id)"
+              >
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="button red" (click)="onCancelClick()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Paginator -->
+    <mat-paginator [length]="products.length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[5, 10, 20]"
+                   (page)="handlePageEvent($event)">
+    </mat-paginator>
+  </div>
+</section>

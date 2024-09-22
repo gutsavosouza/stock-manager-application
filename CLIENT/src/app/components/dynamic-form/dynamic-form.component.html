@@ -1,0 +1,71 @@
+<app-notification #notification></app-notification>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+  <div *ngFor="let field of fields">
+    <div class="form-item" [ngSwitch]="field.type">
+    
+      <!-- Text Input -->
+      <mat-form-field *ngSwitchCase="'text'" class="form-item" appearance="fill">
+        <mat-label>{{ field.label }}</mat-label>
+        <input
+          matInput
+          type="text"
+          [id]="field.name"
+          [formControlName]="field.name"
+          [placeholder]="field.placeholder"
+        />
+        <mat-error *ngIf="form.controls[field.name].invalid" class="validation-text">
+          <ng-container *ngFor="let validation of field.validatons">
+            <span *ngIf="form.controls[field.name].hasError(validation.name)">
+              {{ validation.message }}
+            </span>
+          </ng-container>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Number Input -->
+      <mat-form-field *ngSwitchCase="'number'" class="form-item" appearance="fill">
+        <mat-label>{{ field.label }}</mat-label>
+        <input
+          matInput
+          type="number"
+          [id]="field.name"
+          [formControlName]="field.name"
+          [placeholder]="field.placeholder"
+        />
+        <mat-error *ngIf="form.controls[field.name].invalid" class="validation-text">
+          <ng-container *ngFor="let validation of field.validatons">
+            <span *ngIf="form.controls[field.name].hasError(validation.name)">
+              {{ validation.message }}
+            </span>
+          </ng-container>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Textarea -->
+      <mat-form-field *ngSwitchCase="'textarea'" class="form-item" appearance="fill">
+        <mat-label>{{ field.label }}</mat-label>
+        <textarea
+          matInput
+          [id]="field.name"
+          [formControlName]="field.name"
+          [placeholder]="field.placeholder "
+          [rows]="field.rows || 0"
+          style="resize: none"
+        ></textarea>
+        <mat-error *ngIf="form.controls[field.name].invalid" class="validation-text">
+          <ng-container *ngFor="let validation of field.validatons">
+            <span *ngIf="form.controls[field.name].hasError(validation.name)">
+              {{ validation.message }}
+            </span>
+          </ng-container>
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <div class="form-button-wrapper">
+    <button class="button black" type="submit">Cadastrar</button>
+  </div>
+</form>

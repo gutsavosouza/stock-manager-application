@@ -1,0 +1,21 @@
+<div class="content-wrapper">
+  <section class="content">
+    <h1 class="app-name">StockEase</h1>
+    <h3>Bem vindo, usuário</h3>
+    <span> O que deseja acessar?</span>
+    <div class="options-wrapper">
+      <button [routerLink]="['/products']" class="button black">
+        <span>Produtos</span>
+      </button>
+      <button [routerLink]="['/newproduct']" class="button black">
+        <span>Cadastrar produtos</span>
+      </button>
+      <button [routerLink]="['/']" class="button black">
+        <span>Vendas</span>
+      </button>
+      <button [routerLink]="['/']" class="button black">
+        <span>Cadastrar vendas</span>
+      </button>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+<section class="sidebar" id="sidebar">
+  <a (click)="closeSidebar()" class="sidebar-item" style="text-align: center;">☰</a>
+  <a [routerLink]="['/home']" class="sidebar-item">Início</a>
+  <a [routerLink]="['/products']" class="sidebar-item">Produtos</a>
+  <a [routerLink]="['/newproduct']" class="sidebar-item">Cadastrar Produtos</a>
+  <a [routerLink]="[]" class="sidebar-item">Vendas</a>
+  <a [routerLink]="[]" class="sidebar-item">Cadastrar Vendas</a>
+</section>
+<section>
+  <button
+    class="sidebar-button"
+    style="border-right: solid 2px #1f1f1f; border-bottom: solid 2px #1f1f1f"
+    (click)="openSidebar()"
+  >
+    ☰
+  </button>
+</section>

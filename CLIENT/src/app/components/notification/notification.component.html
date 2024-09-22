@@ -1,0 +1,7 @@
+<div class="notification-container" *ngIf="visible" @fade>
+    <div class="notification">
+      <span>{{ message }}</span>
+      <button (click)="close()">X</button>
+    </div>
+</div>
+  
