@@ -43,3 +43,9 @@
     cursor: pointer;
     background-color: #bfbdbd;
 }
+
+@media (max-width: 768px) {
+    .sidebar-button {
+        background-color: whitesmoke;
+    }
+}
